@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firewall — The Lab — Timothy Bola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lab-detail.css" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">TB<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="lab.html" class="nav-active">The Lab</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span class="status-text">Available for opportunities</span>
+    </div>
+  </nav>
+
+  <header class="detail-header">
+    <div class="detail-header-inner">
+      <a href="lab.html" class="detail-back mono"><span class="accent">←</span> Back to The Lab</a>
+      <div class="detail-badge badge badge--purple">Incoming</div>
+      <h1 class="detail-title">Firewall</h1>
+      <p class="detail-subtitle mono">Unit 02 · Protectli V1410</p>
+    </div>
+  </header>
+
+  <main class="detail-main">
+    <div class="detail-body">
+      <div class="detail-content">
+        <p>The Protectli V1410 is the device I am most looking forward to adding to the rack. It is a purpose-built firewall appliance with 2.5GbE ports, running OPNsense — an open-source firewall and routing platform that gives me full control over everything entering and leaving the network. Where the ISP modem is a device I borrow, this is one I own completely.</p><p>OPNsense handles routing between my WAN and LAN interfaces, enforces firewall rules, and runs OpenVPN for secure remote access back into the lab from anywhere. Beyond that, OPNsense supports IDS/IPS through Suricata or Zenarmor, giving me the ability to inspect traffic and detect threats at the network edge — the same class of capability you would find in an enterprise environment. This device is the foundation that everything else in the rack will eventually depend on for security and segmentation.</p>
+      </div>
+      <aside class="detail-specs">
+        <div class="specs-heading mono">Specs</div>
+        <div class="spec-row"><span class="spec-label mono">Device</span><span class="spec-value">Protectli V1410</span></div><div class="spec-row"><span class="spec-label mono">OS</span><span class="spec-value">OPNsense</span></div><div class="spec-row"><span class="spec-label mono">Ports</span><span class="spec-value">4× 2.5GbE</span></div><div class="spec-row"><span class="spec-label mono">VPN</span><span class="spec-value">OpenVPN</span></div><div class="spec-row"><span class="spec-label mono">IDS/IPS</span><span class="spec-value">Suricata / Zenarmor</span></div><div class="spec-row"><span class="spec-label mono">Status</span><span class="spec-value">Incoming — 2026</span></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-left mono">Timothy Bola <span class="accent">·</span> Porter, ME</div>
+    <div class="footer-center mono accent">TB.</div>
+    <div class="footer-right mono">tbola9@gmail.com</div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

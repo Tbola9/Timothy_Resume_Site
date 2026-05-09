@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Lab — Timothy Bola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lab.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">TB<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="lab.html" class="nav-active">The Lab</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span class="status-text">Available for opportunities</span>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="lab-header">
+    <div class="lab-header-inner">
+      <div class="hero-tag mono"><span class="accent">~/</span> the-lab</div>
+      <h1 class="lab-title">The Lab</h1>
+      <p class="lab-subtitle">
+        A working rack that mirrors what I manage professionally.
+        Click any unit to see what it does and why it's there.
+      </p>
+    </div>
+  </header>
+
+  <!-- RACK -->
+  <main class="lab-main">
+    <div class="rack-wrap">
+
+      <!-- RACK FRAME -->
+      <div class="rack" id="rack">
+
+        <!-- RACK TOP CAP -->
+        <div class="rack-cap rack-cap--top">
+          <div class="rack-bolt"></div>
+          <div class="rack-label-strip mono">TB HOME LAB — RACK A</div>
+          <div class="rack-bolt"></div>
+        </div>
+
+        <!-- 1. ISP MODEM — 2U -->
+        <a href="lab-modem.html" class="rack-unit rack-unit--2u" id="ru-modem">
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+          <div class="ru-body">
+            <div class="ru-left">
+              <span class="ru-number mono">01</span>
+              <div class="ru-lights">
+                <span class="ru-light ru-light--green"></span>
+                <span class="ru-light ru-light--green"></span>
+                <span class="ru-light ru-light--amber"></span>
+              </div>
+            </div>
+            <div class="ru-center">
+              <div class="ru-name">ISP Modem</div>
+              <div class="ru-detail mono">500 Mb Residential Circuit</div>
+            </div>
+            <div class="ru-right">
+              <span class="badge badge--amber">Replace 2026</span>
+              <span class="ru-arrow mono">→</span>
+            </div>
+          </div>
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+        </a>
+
+        <div class="rack-spacer"></div>
+
+        <!-- 2. PROTECTLI — 2U -->
+        <a href="lab-protectli.html" class="rack-unit rack-unit--4u" id="ru-protectli">
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+          <div class="ru-body">
+            <div class="ru-left">
+              <span class="ru-number mono">02</span>
+              <div class="ru-lights">
+                <span class="ru-light ru-light--off"></span>
+                <span class="ru-light ru-light--off"></span>
+                <span class="ru-light ru-light--off"></span>
+              </div>
+            </div>
+            <div class="ru-center">
+              <div class="ru-name">Firewall</div>
+              <div class="ru-detail mono">OPNsense · OpenVPN · IDS/IPS</div>
+            </div>
+            <div class="ru-right">
+              <span class="badge badge--purple">Incoming</span>
+              <span class="ru-arrow mono">→</span>
+            </div>
+          </div>
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+        </a>
+
+        <div class="rack-spacer"></div>
+
+        <!-- 3. CISCO SWITCH — 1U -->
+        <a href="lab-switch.html" class="rack-unit rack-unit--1u" id="ru-switch">
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+          <div class="ru-body">
+            <div class="ru-left">
+              <span class="ru-number mono">03</span>
+              <div class="ru-lights">
+                <span class="ru-light ru-light--green"></span>
+                <span class="ru-light ru-light--green"></span>
+                <span class="ru-light ru-light--green"></span>
+                <span class="ru-light ru-light--green"></span>
+              </div>
+            </div>
+            <div class="ru-center">
+              <div class="ru-name">Switch</div>
+              <div class="ru-detail mono">Cisco Business · Managed</div>
+            </div>
+            <div class="ru-right">
+              <span class="badge badge--green">Active</span>
+              <span class="ru-arrow mono">→</span>
+            </div>
+          </div>
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+        </a>
+
+        <div class="rack-spacer"></div>
+
+        <!-- 4. ACCESS POINT — 2U -->
+        <a href="lab-ap.html" class="rack-unit rack-unit--2u" id="ru-ap">
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+          <div class="ru-body">
+            <div class="ru-left">
+              <span class="ru-number mono">04</span>
+              <div class="ru-lights">
+                <span class="ru-light ru-light--green"></span>
+                <span class="ru-light ru-light--amber"></span>
+              </div>
+            </div>
+            <div class="ru-center">
+              <div class="ru-name">Access Point</div>
+              <div class="ru-detail mono">Wireless · Primary SSID</div>
+            </div>
+            <div class="ru-right">
+              <span class="badge badge--green">Active</span>
+              <span class="ru-arrow mono">→</span>
+            </div>
+          </div>
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+        </a>
+
+        <div class="rack-spacer"></div>
+
+        <!-- 5. VIRTUAL MACHINES — 1U -->
+        <a href="lab-vms.html" class="rack-unit rack-unit--4u" id="ru-vms">
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+          <div class="ru-body">
+            <div class="ru-left">
+              <span class="ru-number mono">05</span>
+              <div class="ru-lights">
+                <span class="ru-light ru-light--green"></span>
+                <span class="ru-light ru-light--green"></span>
+              </div>
+            </div>
+            <div class="ru-center">
+              <div class="ru-name">Virtual Machines</div>
+              <div class="ru-detail mono">Linux Web Server</div>
+            </div>
+            <div class="ru-right">
+              <span class="badge badge--green">Active</span>
+              <span class="ru-arrow mono">→</span>
+            </div>
+          </div>
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+        </a>
+
+        <div class="rack-spacer"></div>
+
+        <!-- 6. DESKTOP WORKSTATION — 1U -->
+        <a href="lab-desktop.html" class="rack-unit rack-unit--1u" id="ru-desktop">
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+          <div class="ru-body">
+            <div class="ru-left">
+              <span class="ru-number mono">06</span>
+              <div class="ru-lights">
+                <span class="ru-light ru-light--green"></span>
+                <span class="ru-light ru-light--amber"></span>
+              </div>
+            </div>
+            <div class="ru-center">
+              <div class="ru-name">Desktop Workstation</div>
+              <div class="ru-detail mono">Lab Management Interface</div>
+            </div>
+            <div class="ru-right">
+              <span class="badge badge--green">Active</span>
+              <span class="ru-arrow mono">→</span>
+            </div>
+          </div>
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+        </a>
+
+        <div class="rack-spacer"></div>
+
+        <!-- 7. PDU — 1U -->
+        <a href="lab-pdu.html" class="rack-unit rack-unit--4u" id="ru-pdu">
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+          <div class="ru-body">
+            <div class="ru-left">
+              <span class="ru-number mono">07</span>
+              <div class="ru-lights">
+                <span class="ru-light ru-light--green"></span>
+                <span class="ru-light ru-light--green"></span>
+                <span class="ru-light ru-light--green"></span>
+              </div>
+            </div>
+            <div class="ru-center">
+              <div class="ru-name">Power Distribution Unit</div>
+              <div class="ru-detail mono">Networked · Remote Power Management</div>
+            </div>
+            <div class="ru-right">
+              <span class="badge badge--green">Active</span>
+              <span class="ru-arrow mono">→</span>
+            </div>
+          </div>
+          <div class="ru-rail">
+            <div class="ru-screw"></div>
+            <div class="ru-screw"></div>
+          </div>
+        </a>
+
+        <!-- RACK BOTTOM CAP -->
+        <div class="rack-cap rack-cap--bottom">
+          <div class="rack-bolt"></div>
+          <div class="rack-bolt"></div>
+        </div>
+
+      </div><!-- /rack -->
+
+      <!-- HINT -->
+      <p class="rack-hint mono">Click any unit to learn more</p>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left mono">Timothy Bola <span class="accent">·</span> Porter, ME</div>
+    <div class="footer-center mono accent">TB.</div>
+    <div class="footer-right mono">tbola9@gmail.com</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

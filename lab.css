@@ -1,0 +1,369 @@
+/* ============================================================
+   LAB PAGE — lab.css
+   ============================================================ */
+
+a.nav-logo { text-decoration: none; color: var(--text); }
+.nav-active { color: var(--purple-soft) !important; }
+
+/* ============================================================
+   PAGE HEADER
+   ============================================================ */
+.lab-header {
+  padding: 9rem 3rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.lab-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -10%;
+  width: 700px; height: 500px;
+  background: radial-gradient(circle, rgba(124,58,237,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.lab-header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.lab-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1;
+  margin: 1rem 0 0.75rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.1s forwards;
+}
+
+.lab-subtitle {
+  font-size: 1rem;
+  color: var(--gray-light);
+  max-width: 520px;
+  line-height: 1.7;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.25s forwards;
+}
+
+/* ============================================================
+   RACK WRAPPER
+   ============================================================ */
+.lab-main {
+  padding: 2rem 3rem 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rack-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 740px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.4s forwards;
+}
+
+/* ============================================================
+   RACK FRAME
+   ============================================================ */
+.rack {
+  width: 100%;
+  background: #0e0e10;
+  border: 2px solid #2e2e34;
+  border-radius: 10px;
+  padding: 0 18px;
+  box-shadow:
+    0 0 0 1px #1a1a1e,
+    0 24px 80px rgba(0,0,0,0.7),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+  position: relative;
+}
+
+/* Side rails — vertical strips */
+.rack::before,
+.rack::after {
+  content: '';
+  position: absolute;
+  top: 40px; bottom: 40px;
+  width: 16px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #1e1e22 0px,
+    #1e1e22 18px,
+    #17171a 18px,
+    #17171a 36px
+  );
+  border: 1px solid #2a2a30;
+}
+.rack::before { left: 0; border-radius: 0 0 0 8px; }
+.rack::after  { right: 0; border-radius: 0 0 8px 0; }
+
+/* ============================================================
+   RACK CAPS
+   ============================================================ */
+.rack-cap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.rack-cap--top {
+  border-bottom: 1px solid #2a2a30;
+}
+
+.rack-cap--bottom {
+  border-top: 1px solid #2a2a30;
+}
+
+.rack-bolt {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #3a3a42, #1a1a1e);
+  border: 1px solid #3a3a42;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.6);
+}
+
+.rack-label-strip {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: #3a3a44;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   SPACER BETWEEN UNITS
+   ============================================================ */
+.rack-spacer {
+  height: 4px;
+  background: #0a0a0c;
+  border-top: 1px solid #1a1a1e;
+  border-bottom: 1px solid #222226;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   RACK UNIT
+   ============================================================ */
+.rack-unit {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(180deg, #1e1e24 0%, #18181d 100%);
+  border-top: 1px solid #2e2e36;
+  border-bottom: 1px solid #101012;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.rack-unit::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(124,58,237,0.06), transparent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.rack-unit:hover {
+  background: linear-gradient(180deg, #232330 0%, #1e1e2a 100%);
+  box-shadow: inset 0 0 0 1px rgba(124,58,237,0.35);
+}
+
+.rack-unit:hover::before {
+  opacity: 1;
+}
+
+.rack-unit:hover .ru-name {
+  color: var(--purple-soft);
+}
+
+.rack-unit:hover .ru-arrow {
+  transform: translateX(4px);
+  color: var(--purple-soft);
+}
+
+/* Heights */
+.rack-unit--1u { min-height: 48px; }
+.rack-unit--2u { min-height: 96px; }
+.rack-unit--4u { min-height: 192px; }
+
+/* ============================================================
+   RACK UNIT INTERNALS
+   ============================================================ */
+
+/* Rail strip top/bottom of each unit */
+.ru-rail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 6px;
+  background: #141418;
+  border-top: 1px solid #222226;
+  border-bottom: 1px solid #0a0a0c;
+}
+
+.ru-screw {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #2e2e36, #0e0e12);
+  border: 1px solid #2a2a32;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.8);
+}
+
+/* Main body row */
+.ru-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  flex: 1;
+  gap: 1rem;
+  min-height: 0;
+}
+
+.ru-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.ru-number {
+  font-size: 0.65rem;
+  color: #3a3a44;
+  letter-spacing: 0.06em;
+  width: 20px;
+}
+
+.ru-lights {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ru-light {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+}
+
+.ru-light--green {
+  background: #22c55e;
+  box-shadow: 0 0 5px #22c55e;
+}
+
+.ru-light--amber {
+  background: #f59e0b;
+  box-shadow: 0 0 5px #f59e0b;
+}
+
+.ru-light--off {
+  background: #2a2a30;
+}
+
+.ru-center {
+  flex: 1;
+  padding: 0.5rem 0;
+}
+
+.ru-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.2rem;
+  transition: color 0.2s ease;
+}
+
+.ru-detail {
+  font-size: 0.68rem;
+  color: #3e3e4a;
+  letter-spacing: 0.04em;
+}
+
+.ru-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.ru-arrow {
+  font-size: 0.8rem;
+  color: #3a3a44;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* ============================================================
+   BADGES
+   ============================================================ */
+.badge--green {
+  background: rgba(34,197,94,0.12);
+  color: #22c55e;
+  border: 1px solid rgba(34,197,94,0.25);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.badge--purple {
+  background: var(--purple-dim);
+  color: var(--purple-soft);
+  border: 1px solid rgba(124,58,237,0.3);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+.badge--amber {
+  background: rgba(245,158,11,0.1);
+  color: #f59e0b;
+  border: 1px solid rgba(245,158,11,0.25);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   RACK HINT
+   ============================================================ */
+.rack-hint {
+  font-size: 0.72rem;
+  color: #3a3a44;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 700px) {
+  .lab-header { padding: 8rem 1.5rem 3rem; }
+  .lab-main   { padding: 2rem 1rem 6rem; }
+
+  .ru-name    { font-size: 0.875rem; }
+  .ru-detail  { display: none; }
+}

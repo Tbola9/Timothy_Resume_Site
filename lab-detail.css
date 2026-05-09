@@ -1,0 +1,162 @@
+/* ============================================================
+   LAB DETAIL PAGE — lab-detail.css
+   ============================================================ */
+
+a.nav-logo { text-decoration: none; color: var(--text); }
+.nav-active { color: var(--purple-soft) !important; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.detail-header {
+  padding: 8rem 3rem 3.5rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -10%;
+  width: 600px; height: 400px;
+  background: radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.detail-header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--gray-mid);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.detail-back:hover { color: var(--purple-soft); }
+
+.detail-badge {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.detail-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.1s forwards;
+}
+
+.detail-subtitle {
+  font-size: 0.8rem;
+  color: var(--purple-soft);
+  letter-spacing: 0.06em;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.2s forwards;
+}
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+.detail-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 3rem 8rem;
+}
+
+.detail-body {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.detail-content p {
+  font-size: 1rem;
+  color: var(--gray-light);
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.3s forwards;
+}
+
+.detail-content p:nth-child(2) {
+  animation-delay: 0.45s;
+}
+
+/* ============================================================
+   SPECS SIDEBAR
+   ============================================================ */
+.detail-specs {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  position: sticky;
+  top: 6rem;
+  opacity: 0;
+  animation: fadeIn 0.6s ease 0.5s forwards;
+}
+
+.specs-heading {
+  font-size: 0.65rem;
+  color: var(--purple-soft);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.spec-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.spec-row:last-child { border-bottom: none; }
+
+.spec-label {
+  font-size: 0.65rem;
+  color: var(--gray-mid);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.spec-value {
+  font-size: 0.875rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 700px) {
+  .detail-header { padding: 7rem 1.5rem 2.5rem; }
+  .detail-main   { padding: 3rem 1.5rem 5rem; }
+
+  .detail-body {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .detail-specs { position: static; }
+}

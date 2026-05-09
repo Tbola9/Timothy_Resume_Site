@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Distribution Unit — The Lab — Timothy Bola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lab-detail.css" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">TB<span class="accent">.</span></a>
+    <ul class="nav-links">
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="lab.html" class="nav-active">The Lab</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span class="status-text">Available for opportunities</span>
+    </div>
+  </nav>
+
+  <header class="detail-header">
+    <div class="detail-header-inner">
+      <a href="lab.html" class="detail-back mono"><span class="accent">←</span> Back to The Lab</a>
+      <div class="detail-badge badge badge--green">Active</div>
+      <h1 class="detail-title">Power Distribution Unit</h1>
+      <p class="detail-subtitle mono">Unit 07 · Networked Power Management</p>
+    </div>
+  </header>
+
+  <main class="detail-main">
+    <div class="detail-body">
+      <div class="detail-content">
+        <p>The PDU is the last unit in the rack and arguably one of the most practical. It distributes power to every other device in the lab — modem, firewall, switch, hypervisor, workstation, and access point — from a single managed unit. What makes it more than a power strip is that it is networked into the switch, which means I can monitor power consumption per outlet and remotely force a hard restart on any device by cycling its outlet without physically touching the rack.</p><p>Remote power cycling is a capability that sounds simple but solves a real problem: when a device stops responding to its own management interface, the only option left is a hard reboot. With a networked PDU that becomes a software action instead of a physical one. In a production environment this is standard — in a home lab it is the difference between a quick fix and a trip to the hardware.</p>
+      </div>
+      <aside class="detail-specs">
+        <div class="specs-heading mono">Specs</div>
+        <div class="spec-row"><span class="spec-label mono">Type</span><span class="spec-value">Networked PDU</span></div><div class="spec-row"><span class="spec-label mono">Management</span><span class="spec-value">Per-Outlet Control</span></div><div class="spec-row"><span class="spec-label mono">Powers</span><span class="spec-value">All Rack Units</span></div><div class="spec-row"><span class="spec-label mono">Form Factor</span><span class="spec-value">1U Rackmount</span></div><div class="spec-row"><span class="spec-label mono">Status</span><span class="spec-value">Active</span></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-left mono">Timothy Bola <span class="accent">·</span> Porter, ME</div>
+    <div class="footer-center mono accent">TB.</div>
+    <div class="footer-right mono">tbola9@gmail.com</div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
